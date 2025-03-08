@@ -1,8 +1,9 @@
 from tkinter import *
 from tkinter import messagebox
 import backend
+
 win = Tk()
-win.geometry("540x350+430+200")
+win.geometry("540x370+430+200")
 win.resizable(0,0)
 win.config(bg="light blue")
 #==================================
@@ -42,20 +43,21 @@ def login():
     resualt = student.login(ent_pass2.get())
     if resualt == True:
         import ui2
+        win.destroy()
     else:
         messagebox.showinfo("Not found","Not found this password")
 #==================================
-lbl_name = Label(text="Name :",font=20,bg="light blue")
-lbl_name.place(x=20,y=20)
+lbl_name = Label(text="Name :",font=("GiddyupStd", 15 ),bg="light blue")
+lbl_name.place(x=20,y=15)
 
-lbl_lname = Label(text="Family :",font=20,bg="light blue")
+lbl_lname = Label(text="Family :",font=("GiddyupStd", 15 ),bg="light blue")
 lbl_lname.place(x=310,y=20)
 
-lbl_pass = Label(text="Pass :",font=20,bg="light blue")
+lbl_pass = Label(text="Pass :",font=("GiddyupStd", 15 ),bg="light blue")
 lbl_pass.place(x=25,y=80)
 
-lbl_name_dore = Label(text="Name dore :",font=20,bg="light blue")
-lbl_name_dore.place(x=280,y=80)
+lbl_name_dore = Label(text="Name dore :",font=("GiddyupStd", 15 ),bg="light blue")
+lbl_name_dore.place(x=286,y=80)
 
 lbl_pass2 = Label(text="Pass :",font=20,bg="light blue")
 lbl_pass2.place(x=20,y=320)
@@ -84,22 +86,22 @@ ent_name_dore.place(x=380,y=80)
 ent_pass2 =Entry(win)
 ent_pass2.place(x=70,y=320,width=250)
 #==================================================
-btn_show = Button(win,text="show all",width=16,height=1,command=updateall)
+btn_show = Button(win,text="show all",width=16,height=1,command=updateall,font=("AdobeGothicStd-Bold",  ))
 btn_show.place(x=380,y=120)
 
-btn_add = Button(win,text="insert",width=16,height=1,command=insert)
+btn_add = Button(win,text="insert",width=16,height=1,command=insert,font=("AdobeGothicStd-Bold",  ))
 btn_add.place(x=380,y=160)
 
-btn_clear= Button(win,text="clear",width=16,height=1,command=clear)
+btn_clear= Button(win,text="clear",width=16,height=1,command=clear,font=("AdobeGothicStd-Bold",  ))
 btn_clear.place(x=380,y=200)
 
-btn_delet= Button(win,text="delete",width=16,height=1,command=delete)
+btn_delet= Button(win,text="delete",width=16,height=1,command=delete,font=("AdobeGothicStd-Bold",  ))
 btn_delet.place(x=380,y=240)
 
-btn_exit= Button(win,text="exit",width=16,height=1,command=exit)
+btn_exit= Button(win,text="exit",width=16,height=1,command=exit,font=("AdobeGothicStd-Bold",  ))
 btn_exit.place(x=380,y=280)
 
-btn_login= Button(win,text="login",width=16,height=1,command=login)
+btn_login= Button(win,text="login",width=16,height=1,command=login,font=("AdobeGothicStd-Bold",  ))
 btn_login.place(x=380,y=320)
 
 #==================================
